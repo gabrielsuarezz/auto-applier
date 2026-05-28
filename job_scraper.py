@@ -20,10 +20,10 @@ REJECT_KEYWORDS = [
 ]
 
 QUERIES = [
-    "software engineer new grad 2025 site:boards.greenhouse.io OR site:job-boards.greenhouse.io",
-    "software engineer entry level 2025 site:jobs.lever.co",
-    "new grad software engineer 2026 site:boards.greenhouse.io OR site:job-boards.greenhouse.io",
-    "junior software engineer 2025 site:jobs.lever.co",
+    "software engineer new grad 2025 boards.greenhouse.io",
+    "software engineer entry level 2025 jobs.lever.co",
+    "new grad software engineer 2026 job-boards.greenhouse.io",
+    "junior software engineer 2025 jobs.lever.co",
 ]
 
 
