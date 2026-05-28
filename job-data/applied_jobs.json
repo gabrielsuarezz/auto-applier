@@ -1,0 +1,184 @@
+[
+  {
+    "company": "Sigma Computing",
+    "role": "Software Engineer (New Grad Program)",
+    "job_id": "7690411003",
+    "url": "https://job-boards.greenhouse.io/sigmacomputing/jobs/7690411003",
+    "date_applied": "2026-05-27",
+    "dry_run": true
+  },
+  {
+    "company": "Sigma Computing",
+    "role": "Software Engineer (New Grad Program)",
+    "url": "https://job-boards.greenhouse.io/sigmacomputing/jobs/4353710003",
+    "date": "2026-05-27",
+    "dry_run": true,
+    "job_id": "4353710003",
+    "resume_used": "/workspaces/auto-applier/job-data/resume.pdf",
+    "script": "apply_sigmacomputing_4353710003.py",
+    "execution_status": "dry_run_executed_playwright_navigated_greenhouse_listing_page",
+    "profile_mapping": {
+      "role_type": "General Full-Stack SWE (New Grad)",
+      "koombea_bullet": "Default \u2014 React/Node.js SPA + 20% load-time reduction",
+      "jmg_bullet": "Default \u2014 Java + PostgreSQL enterprise time-tracking system",
+      "primary_project": "Voxtant (1st of 80+ at PlutoHacks 2025, full-stack, end-to-end ownership)",
+      "secondary_project": "Helios AI (1st at Knight Hacks VIII, CNN + autonomous systems)",
+      "tertiary_project": "ViewGuard (real-time security pipeline, async streams)",
+      "pantheon_used": false,
+      "viewguard_used": true,
+      "gpa_in_text_box": false,
+      "cover_letter_slot": "resume.pdf uploaded (no cover letter generated)",
+      "salary_field": "90000",
+      "us_work_auth_answer": "Yes",
+      "visa_sponsorship": "No"
+    }
+  },
+  {
+    "company": "Veeva Systems",
+    "role": "Associate Software Engineer (Engineering Development Program)",
+    "job_id": "8fe22df0-02b4-453d-919c-c8998cf913f6",
+    "url": "https://jobs.lever.co/veeva/8fe22df0-02b4-453d-919c-c8998cf913f6",
+    "date": "2026-05-27",
+    "dry_run": true,
+    "resume_used": "/workspaces/auto-applier/job-data/resume.pdf",
+    "script": "apply_veeva_8fe22df0.py",
+    "execution_status": "dry_run_intercepted_submit_not_sent",
+    "profile_mapping": {
+      "role_type": "General SWE \u2014 New Grad EDP",
+      "koombea_bullet": "Default \u2014 React/Node.js SaaS, 20% load-time reduction",
+      "jmg_bullet": "Default \u2014 Java + PostgreSQL, 99.9% uptime",
+      "primary_project": "Voxtant (1st of 80+ at PlutoHacks 2025, full-stack AI interview coach)",
+      "secondary_project": "Helios AI (1st at Knight Hacks VIII, CNN solar tracking)",
+      "tertiary_project": "ViewGuard (real-time YOLO + Gemini security pipeline)",
+      "pantheon_used": false,
+      "viewguard_used": true,
+      "gpa_in_text_box": false,
+      "cover_letter_slot": "resume.pdf re-uploaded (no cover letter generated per policy)",
+      "salary_field": "90000",
+      "us_work_auth": "Yes",
+      "visa_sponsorship": "No (role offers no sponsorship)"
+    }
+  },
+  {
+    "company": "Warp",
+    "role": "Software Engineer",
+    "url": "https://job-boards.greenhouse.io/warp/jobs/4324888004",
+    "date": "2026-05-28",
+    "dry_run": true,
+    "job_id": "4324888004",
+    "resume_used": "/workspaces/auto-applier/job-data/resume.pdf",
+    "script": "apply_warp_4324888004.py",
+    "execution_status": "dry_run_executed_submit_intercepted",
+    "dry_run_notes": {
+      "fields_filled": [
+        "first_name",
+        "last_name",
+        "email",
+        "phone",
+        "resume_upload"
+      ],
+      "fields_not_present_on_form": [
+        "linkedin_url",
+        "github_url",
+        "website_url",
+        "cover_letter_slot",
+        "country_select",
+        "salary_input",
+        "why_warp_textarea",
+        "eeo_selects"
+      ],
+      "submit_button_text_confirmed": "Submit application",
+      "submit_intercepted": true,
+      "exit_code": 0
+    },
+    "profile_mapping": {
+      "role_type": "AI / Agent Engineering (Agentic Dev Tools)",
+      "koombea_bullet": "API Focus \u2014 React/TypeScript/Node.js, GraphQL, 20% load-time reduction",
+      "jmg_bullet": "Spring Boot/AWS Focus \u2014 microservices, concurrent REST APIs",
+      "primary_project": "Voxtant / Pantheon \u2014 LLM/Agent swarm architecture, multi-agent coordination, production LLM integrations, structured output parsing, streaming responses (1st of 80+ at PlutoHacks 2025)",
+      "secondary_project": "Helios AI (1st at Knight Hacks VIII, CNN-based autonomous tracking)",
+      "tertiary_project": "ViewGuard (real-time async security pipeline, YOLO + Gemini)",
+      "viewguard_used": false,
+      "pantheon_used": true,
+      "bonus_skills_matched": [
+        "Rust",
+        "Go",
+        "Linux"
+      ],
+      "gpa_in_text_box": false,
+      "cover_letter_slot": "not_present_on_this_form",
+      "salary_field": "not_present_on_this_form",
+      "us_work_auth_answer": "Yes"
+    }
+  },
+  {
+    "company": "Warp",
+    "role": "Software Engineer",
+    "job_id": "4324888004",
+    "url": "https://job-boards.greenhouse.io/warp/jobs/4324888004",
+    "date_applied": "2026-05-28",
+    "dry_run": false,
+    "resume_used": "/workspaces/auto-applier/job-data/resume.pdf",
+    "script": "apply_warp_4324888004.py",
+    "execution_status": "submitted_live",
+    "screenshots": {
+      "pre_submit": "/workspaces/auto-applier/job-data/processed/pre_submit_job-boards.greenhouse.io.png",
+      "post_submit": "/workspaces/auto-applier/job-data/processed/post_submit_job-boards.greenhouse.io.png"
+    },
+    "profile_mapping": {
+      "role_type": "AI / Agent Engineering (Agentic Dev Tools)",
+      "koombea_bullet": "API Focus \u2014 React/TypeScript/Node.js, GraphQL, 20% load-time reduction",
+      "jmg_bullet": "Spring Boot/AWS Focus \u2014 microservices, concurrent REST APIs",
+      "primary_project": "Voxtant / Pantheon \u2014 LLM/Agent swarm architecture, multi-agent coordination, production LLM integrations, structured output parsing, streaming (1st of 80+ at PlutoHacks 2025)",
+      "secondary_project": "Helios AI (1st at Knight Hacks VIII, CNN-based autonomous tracking)",
+      "tertiary_project": "ViewGuard (real-time async security pipeline, YOLO + Gemini)",
+      "pantheon_used": true,
+      "viewguard_used": false,
+      "bonus_skills": [
+        "Rust",
+        "Go",
+        "Linux"
+      ],
+      "cover_letter": "not present on this form",
+      "salary_field": "not present on this form",
+      "us_work_auth_answer": "Yes",
+      "visa_sponsorship": "No"
+    }
+  },
+  {
+    "company": "Canonical",
+    "role": "Graduate Software Engineer",
+    "job_id": "7814327",
+    "url": "https://job-boards.greenhouse.io/canonical/jobs/7814327",
+    "date_applied": "2026-05-28",
+    "dry_run": false,
+    "resume_used": "/workspaces/auto-applier/job-data/resume.pdf",
+    "script": "apply_canonical_7814327.py",
+    "execution_status": "submitted_live",
+    "screenshots": {
+      "pre_submit": "/workspaces/auto-applier/job-data/processed/pre_submit_canonical.png",
+      "post_submit": "/workspaces/auto-applier/job-data/processed/post_submit_canonical.png"
+    },
+    "profile_mapping": {
+      "role_type": "Linux / Open Source / General Software Engineering",
+      "primary_project": "ViewGuard \u2014 real-time security pipeline: YOLOv8 + Gemini 2.0 Flash, async multi-stream, FastAPI backend, React telemetry dashboard",
+      "secondary_project": "Shadow Vision \u2014 open-source hand-gesture dataset release on GitHub, Python/OpenCV/MediaPipe, 90%+ accuracy",
+      "tertiary_project": "Voxtant \u2014 1st of 80+ PlutoHacks 2025, AI agent workflow for interview coaching; Helios AI \u2014 1st at Knight Hacks VIII (UCF)",
+      "engineering_areas": [
+        "AI/ML",
+        "Cloud",
+        "Ubuntu Server"
+      ],
+      "languages_checked": [
+        "Python",
+        "Golang",
+        "Rust"
+      ],
+      "graduation_year": "2026",
+      "cover_letter": "not present on this form",
+      "salary_field": "not present on this form",
+      "us_work_auth": "Yes \u2014 legally authorized, no sponsorship needed",
+      "travel_commitment": "Yes \u2014 2-4 times yearly confirmed"
+    }
+  }
+]

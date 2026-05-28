@@ -1,0 +1,21 @@
+# Runtime state
+daemon.pid
+system.log
+/tmp/
+
+# Secrets
+.env
+
+# Queue and processed are runtime directories — keep structure, ignore contents
+job-data/queue/*.md
+job-data/processed/*.md
+job-data/processed/*.log
+job-data/processed/*.png
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Claude Code internals
+.claude/
