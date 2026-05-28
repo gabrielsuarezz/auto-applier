@@ -1,7 +1,8 @@
 #!/bin/bash
-QUEUE_DIR="job-data/queue"
-PROCESSED_DIR="job-data/processed"
-PROMPT_FILE="agent-prompt.md"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+QUEUE_DIR="$SCRIPT_DIR/job-data/queue"
+PROCESSED_DIR="$SCRIPT_DIR/job-data/processed"
+PROMPT_FILE="$SCRIPT_DIR/agent-prompt.md"
 
 echo "Starting Autonomous Application Loop..."
 
@@ -24,7 +25,9 @@ for job_file in "$QUEUE_DIR"/*.md; do
     fi
 
     TEMP_LOG=$(mktemp /tmp/claude_job_XXXXXX.log)
-    cat "$job_file" | claude -p "LIVE MODE: Process and fully submit this job application. Do not dry-run." \
+    cat "$job_file" | claude \
+      --effort max \
+      -p "LIVE MODE: Process and fully submit this job application. Do not dry-run. Fill every single field." \
       --system-prompt-file "$PROMPT_FILE" \
       --dangerously-skip-permissions > "$TEMP_LOG" 2>&1
 
@@ -37,19 +40,33 @@ for job_file in "$QUEUE_DIR"/*.md; do
 
     JOB_URL=$(grep "^URL:" "$job_file" | awk '{print $2}')
     DOMAIN=$(echo "$JOB_URL" | sed 's|https\?://||' | cut -d'/' -f1)
-    SCREENSHOT="$PROCESSED_DIR/post_submit_${DOMAIN}.png"
-    if [ ! -f "$SCREENSHOT" ]; then
+    ERROR_SCREENSHOT="$PROCESSED_DIR/error_${DOMAIN}.png"
+    SUCCESS_SCREENSHOT="$PROCESSED_DIR/post_submit_${DOMAIN}.png"
+
+    # Playwright reported CAPTCHA or validation errors via sys.exit(1)
+    if [ -f "$ERROR_SCREENSHOT" ]; then
       echo "=== PLAYWRIGHT ERROR LOG FOR $(basename "$job_file") ==="
       cat "$TEMP_LOG"
       echo "============================================="
-      echo "ERROR: Submission screenshot missing at $SCREENSHOT. Refusing to mark $(basename "$job_file") as processed."
+      echo "ERROR: Playwright detected CAPTCHA or form validation errors. Screenshot saved to $ERROR_SCREENSHOT. Job stays in queue."
       rm -f "$TEMP_LOG"
       continue 2
     fi
 
+    # No screenshot at all — script crashed or agent failed to run Playwright
+    if [ ! -f "$SUCCESS_SCREENSHOT" ]; then
+      echo "=== PLAYWRIGHT ERROR LOG FOR $(basename "$job_file") ==="
+      cat "$TEMP_LOG"
+      echo "============================================="
+      echo "ERROR: No submission screenshot found at $SUCCESS_SCREENSHOT. Job stays in queue."
+      rm -f "$TEMP_LOG"
+      continue 2
+    fi
+
+    # Success
     mv "$job_file" "$PROCESSED_DIR/"
     rm -f "$TEMP_LOG"
-    echo "Application processed. Cooling down for 15 seconds..."
+    echo "SUCCESS: $(basename "$job_file") submitted and verified. Cooling down for 15 seconds..."
     sleep 15
     break
   done
